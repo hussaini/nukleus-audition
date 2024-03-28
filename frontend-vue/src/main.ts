@@ -8,6 +8,7 @@ import RoleCreate from './pages/RoleIndex.vue'
 import {createPinia} from 'pinia'
 
 const routes = [
+    { path: '/', redirect: '/inventory' },
     { path: '/inventory', component: InventoryIndex },
     { path: '/inventory/:productId', component: InventoryShow },
     { path: '/role/create', component: RoleCreate },
