@@ -38,7 +38,7 @@ const router = useRouter()
 const { canRoleDo } = useRoleStore()
 const { suppliers } = storeToRefs(useSupplierStore())
 
-const productId = route.params.productId as number
+const productId = parseInt(route.params.productId.toString())
 const product = ref<any>()
 
 const fetchSuppliers = () => {

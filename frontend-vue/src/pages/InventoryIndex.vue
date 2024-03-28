@@ -148,7 +148,6 @@ import {storeToRefs} from 'pinia'
 
 const products = ref<Array<any>>([])
 
-const { roles } = storeToRefs(useRoleStore())
 const { suppliers } = storeToRefs(useSupplierStore())
 const { canRoleDo } = useRoleStore()
 
@@ -168,7 +167,7 @@ const totalItem = ref<number>(0)
 const currentItemsDisplay = computed<number>(() => products.value.length < perPage.value ? products.value.length : perPage.value)
 
 const fetchInventory = async () => {
-    const query = {}
+    const query: any = {}
     if (searchName.value) {
         query['search_name'] = searchName.value
     }
@@ -203,7 +202,7 @@ const fetchInventory = async () => {
             perPage.value = data.perPage
             totalPage.value = data.totalPage
             totalItem.value = data.totalItem
-        }).catch((error) => {
+        }).catch(() => {
             products.value = []
             currentPage.value = 1
             totalItem.value = 0
