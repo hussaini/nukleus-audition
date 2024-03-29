@@ -229,6 +229,8 @@ const addProduct = () => {
 
             resetFilter()
             alert('New product added')
+        }).catch(() => {
+            alert('Unable to add product')
         })
 }
 

@@ -30,7 +30,6 @@ const switchRole = (role: string) => {
     RoleService.switchRole(data)
         .then(() => {
             currentRole.value = cookies.get('user_role')
-
         })
 }
 
