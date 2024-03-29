@@ -23,6 +23,7 @@ The source code is consists of 2 parts:
     - Assuming you are using UNIX environment, inside `backend-python`, run `python -m venv` to install `virtualenv`
     - Run `source venv/bin/activate` to activate `virtualenv`
     - Run `pip install -r requirements.txt` to install required library
+    - Run `flask --app=main.py db:seed` for first time database migration and data population
     - Run `python -m flask --app=main.py run --host=localhost --port=5000`. The backend server will be running at `http://localhost:5000`
     - For testing, the code is located at `test.py`. It can be run by `pytest --config-file=test.py test.py`
 2. Frontend
