@@ -43,3 +43,4 @@ The application consists of 3 pages:
 
 3.  `/roles` page
     - This is roles page, where user can add a new role, and list of all roles available with its permissions
+4. To switch role, simply click one of the role at top right. The page will be reflected according to its permission
